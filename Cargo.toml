@@ -1,0 +1,17 @@
+[package]
+name = "csv_rec"
+description = "Remove Empty Columns specially from Large CSV's"
+version = "0.1.0"
+edition = "2021"
+authors = ["Sriram <marirs@gmail.com>"]
+
+[[bin]]
+name = "csv_rec"
+path = "src/main.rs"
+
+
+[dependencies]
+tokio = { version = "1", features = ["sync", "rt-multi-thread", "net",  "macros", "io-util", "signal", "rt", "fs", "io-util"] }
+clap = { version = "4.4.5", features = ["derive"] }
+chrono = "0.4.31"
+futures = "0.3.28"
